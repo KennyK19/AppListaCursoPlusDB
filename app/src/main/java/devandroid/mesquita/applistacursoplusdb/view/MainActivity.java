@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
     List<String> nomesDosCursos;
 
     EditText editPrimeiroNome;
-    EditText editSobreNomeAluno;
-    EditText editNomeCurso;
+    EditText editSobrenomeAluno;
+    EditText editCursoDesejado;
     EditText editTelefoneContato;
 
     Button btnLimpar;
@@ -52,14 +52,14 @@ public class MainActivity extends AppCompatActivity {
         //controller.buscar(pessoa);
 
         editPrimeiroNome = findViewById(R.id.editPrimeiroNome);
-        editSobreNomeAluno = findViewById(R.id.editSobreNomeAluno);
-        editNomeCurso = findViewById(R.id.editNomeCurso);
+        editSobrenomeAluno = findViewById(R.id.editSobrenomeAluno);
+        editCursoDesejado = findViewById(R.id.editNomeCurso);
         editTelefoneContato = findViewById(R.id.editTelefoneContato);
         spinner = findViewById(R.id.spinner);
 
         editPrimeiroNome.setText(pessoa.getPrimeiroNome());
-        editSobreNomeAluno.setText(pessoa.getSobreNome());
-        editNomeCurso.setText(pessoa.getCursoDesejado());
+        editSobrenomeAluno.setText(pessoa.getSobrenome());
+        editCursoDesejado.setText(pessoa.getCursoDesejado());
         editTelefoneContato.setText(pessoa.getTelefoneContato());
 
         btnLimpar = findViewById(R.id.btnLimpar);
@@ -81,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 editPrimeiroNome.setText("");
-                editSobreNomeAluno.setText("");
+                editSobrenomeAluno.setText("");
                 editTelefoneContato.setText("");
-                editNomeCurso.setText("");
+                editCursoDesejado.setText("");
 
                 controller.limpar();
 
@@ -103,9 +103,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 pessoa.setPrimeiroNome(editPrimeiroNome.getText().toString());
-                pessoa.setSobreNome(editSobreNomeAluno.getText().toString());
+                pessoa.setSobrenome(editSobrenomeAluno.getText().toString());
+                pessoa.setCursoDesejado(editCursoDesejado.getText().toString());
                 pessoa.setTelefoneContato(editTelefoneContato.getText().toString());
-                pessoa.setCursoDesejado(editNomeCurso.getText().toString());
 
                 Toast.makeText(MainActivity.this, "Salvo " + pessoa.toString(), Toast.LENGTH_LONG).show();
 

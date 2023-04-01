@@ -2,19 +2,21 @@ package devandroid.mesquita.applistacursoplusdb.model;
 
 public class Pessoa {
 
+    private int id;
     private String primeiroNome;
-    private String sobreNome;
+    private String sobrenome;
     private String cursoDesejado;
     private String telefoneContato;
 
     public Pessoa() {
     }
 
-    public Pessoa(String primeiroNome, String sobreNome, String cursoDesejado, String telefoneContato) {
-        this.primeiroNome = primeiroNome;
-        this.sobreNome = sobreNome;
-        this.cursoDesejado = cursoDesejado;
-        this.telefoneContato = telefoneContato;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getPrimeiroNome() {
@@ -25,12 +27,12 @@ public class Pessoa {
         this.primeiroNome = primeiroNome;
     }
 
-    public String getSobreNome() {
-        return sobreNome;
+    public String getSobrenome() {
+        return sobrenome;
     }
 
-    public void setSobreNome(String sobreNome) {
-        this.sobreNome = sobreNome;
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 
     public String getCursoDesejado() {
@@ -53,7 +55,7 @@ public class Pessoa {
     public String toString() {
         return "Pessoa :" +
                 "primeiroNome='" + primeiroNome + '\'' +
-                ", sobreNome='" + sobreNome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
                 ", cursoDesejado='" + cursoDesejado + '\'' +
                 ", telefoneContato='" + telefoneContato ;
     }

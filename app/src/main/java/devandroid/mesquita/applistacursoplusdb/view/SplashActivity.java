@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import devandroid.mesquita.applistacursoplusdb.R;
+import devandroid.mesquita.applistacursoplusdb.database.ListaVipDB;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -17,12 +18,14 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        cumutarTelaSplash();
+        ListaVipDB db = new ListaVipDB(SplashActivity.this);
+
+        comutarTelaSplash();
 
 
     }
 
-    private void cumutarTelaSplash() {
+    private void comutarTelaSplash() {
 
         new Handler().postDelayed(new Runnable() {
             @Override
