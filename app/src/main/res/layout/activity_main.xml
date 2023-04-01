@@ -41,7 +41,7 @@
             app:layout_constraintTop_toBottomOf="@+id/txtTituloApp" />
 
         <EditText
-            android:id="@+id/editSobreNomeAluno"
+            android:id="@+id/editSobrenomeAluno"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -68,7 +68,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.333"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editSobreNomeAluno" />
+            app:layout_constraintTop_toBottomOf="@+id/editSobrenomeAluno" />
 
         <EditText
             android:id="@+id/editTelefoneContato"
